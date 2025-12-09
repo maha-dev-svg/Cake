@@ -1,16 +1,16 @@
-import javax.swing.*; 
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.*;
+import  java.awt.*;
 
 
 
 public class CakeBakery extends JFrame implements ActionListener{
-//	private JTextField text1,text2,text3,text4;
-//	private JLabel label1,label2;
-	private JButton //button1,button2,button3,button4,button5,
+	private JTextField text1,text2,text3,text4;
+	private JLabel label1,label2;
+	private JButton button1,button2,button3,button4,button5,
 	buttonLogout;
-	private JPanel //panel1,panel2,panel3,panel4,panel5,
+	private JPanel panel1,panel2,panel3,panel4,panel5,
 	panel6;
 	
 	public CakeBakery()
@@ -28,8 +28,7 @@ public class CakeBakery extends JFrame implements ActionListener{
 	panel6.add(buttonLogout);
 	
 	add(panel6);
-	
-		
+	//idk
 		
 	}
 	@Override
@@ -51,4 +50,3 @@ myCakeBakery.setSize(300,350);
 	
 }
 }
-
