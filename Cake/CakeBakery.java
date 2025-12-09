@@ -37,7 +37,7 @@ public class CakeBakery extends JFrame implements ActionListener{
 
 		if(e.getSource()==buttonLogout)
 		{
-			System.out.println("You have been logout secefuly");
+			System.out.println("You have been logout successfully");
 		}
 	}
 	
