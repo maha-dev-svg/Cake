@@ -5,8 +5,8 @@ import  java.awt.*;
 
 
 
-public class CakeBakery extends JFrame implements ActionListener , User{
-	
+public class CakeBakery extends JFrame implements ActionListener{
+	private User currentuser;
 	private JTextField text1,text2,text3,text4;
 	private JLabel label1,label2;
 	private JButton button1,button2,button3,button4,buttonAddItem,
@@ -14,27 +14,26 @@ public class CakeBakery extends JFrame implements ActionListener , User{
 	private JPanel panel1,panel2,panel3,panel4,panel5,
 	panel6;
 	
-	public CakeBakery()
+	
+	
+public CakeBakery(User user)
 	{
+
 		super("Cake Bakery");
 		setLayout(new FlowLayout());	
-	//panel6=new JPanel();
-	
+
+		this.currentuser=user;
 		buttonLogout=new JButton("Logout");
 		buttonhandler handler=new buttonhandler();
 	   buttonLogout.addActionListener(handler);
 	add(buttonLogout);
-	   //panel4.add(buttonLogout);
 	
-	//add(panel4);
-	//if(AddItem()==true)
 	{
 	buttonAddItem=new JButton("Add item");
 	buttonAddItem.addActionListener(handler);
 	add(buttonAddItem);
 	}
-	//panel5.add(buttonAddItem);
-	//add(panel5);
+	
 		
 	}
 	private class buttonhandler implements ActionListener{
@@ -46,16 +45,26 @@ public class CakeBakery extends JFrame implements ActionListener , User{
 		{
 			System.out.println("You have been logout successfully");
 		}
-		if(e.getSource()==buttonAddItem)
-		{
-		JOptionPane.showMessageDialog(null, "item added succesfully");
+		if(e.getSource()==buttonAddItem) {
+		addingItem(currentuser);
 		}
 	}
+	}
+	public static void addingItem(User user)
+	{
+		if(user.canAddCake()==true) {
+		JOptionPane.showMessageDialog(null, "item added succesfully");
+		}
+		else {
+			JOptionPane.showMessageDialog(null,"you can not add item");
+		}
 	}
 	
 public static void main(String []args)
 {
-	CakeBakery myCakeBakery=new CakeBakery();
+	User user =new Manager();
+	
+	CakeBakery myCakeBakery=new CakeBakery(user);
 	myCakeBakery.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	myCakeBakery.setVisible(true);
 myCakeBakery.setSize(300,350);

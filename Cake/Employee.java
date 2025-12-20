@@ -4,7 +4,7 @@ public static void main(String []args)
 {
 Employee emp= new Employee();
 }
-public static boolean AddItem() {
+public boolean canAddCake() {
 	
 	return true;
 }
