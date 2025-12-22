@@ -1,6 +1,6 @@
 
 public class ChocolateCake extends CakeBakeryi{
-	 private final String size="large";
+	 private  String size="large";
 
 	 public ChocolateCake(String name,double price,String size)
 	 {

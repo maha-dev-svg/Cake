@@ -1,6 +1,6 @@
 
 public class MangoCake extends CakeBakeryi{
- private final String size="small";
+ private String size="small";
 
  public MangoCake(String name,double price,String size)
  {

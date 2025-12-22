@@ -51,6 +51,7 @@ public CakeBakery(User user)
 			deleteItem(currentuser);	
 	}
 	}
+	// method for adding items
 	public static void addingItem(User user)
 	{
 		if(user.canAddCake()==true) {
@@ -60,6 +61,7 @@ public CakeBakery(User user)
 			JOptionPane.showMessageDialog(null,"you can not add item");
 		}
 	}
+	// method for deleteitem
 	public static void deleteItem(User user)
 	{
 		if(user.canDeleteCake()==true)
