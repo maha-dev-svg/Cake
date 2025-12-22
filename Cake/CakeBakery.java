@@ -5,12 +5,8 @@ import  java.awt.*;
 
 public class CakeBakery extends JFrame implements ActionListener{
 	private User currentuser;
-	private JTextField text1,text2,text3,text4;
-	private JLabel label1,label2;
-	private JButton button1,button2,button3,buttonDeleteItem,buttonAddItem,
+	private JButton buttonDeleteItem,buttonAddItem,
 	buttonLogout;
-	private JPanel panel1,panel2,panel3,panel4,panel5,
-	panel6;
 	private JComboBox<String> cakebox;
 	private static String  [] names= {"Mango cake","Chocolate cake"};
 public CakeBakery(User user)
